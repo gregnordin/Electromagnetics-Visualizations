@@ -1,1 +1,6 @@
-.margin-h4items {margin-top: 35px;}
+.margin-bottom-p {margin-bottom: 35px;}
+
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
+    position: relative;
+}
