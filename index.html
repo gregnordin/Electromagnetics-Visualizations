@@ -16,6 +16,8 @@
         integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
         crossorigin="anonymous">
 
+    <link rel="stylesheet" href="static/index.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,8 +29,58 @@
 
 <body>
 
-    <p><a href="https://rawgit.com/gregnordin/Polarization/master/polarization_2d.html">
-        2D interactive polarization visualization/animation</a></p>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+              <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active">
+                    <a href="http://gregnordin.github.io/Electromagnetics-Visualizations/">Home</a></li>
+                <li role="presentation"><a href="http://ece.byu.edu/faculty/nordin">About</a></li>
+              </ul>
+            </nav>
+        </div>
+
+        <div class="jumbotron">
+            <h2>Visualize Electromagnetic Phenomena</h2>
+            <p class="lead">Interactive visualizations and animations for BYU ECEn 360 junior-level electromagnetics course <br>Winter Semester 2016</p>
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Polarization</h4>
+                <p><a href="https://rawgit.com/gregnordin/Polarization/master/polarization_2d.html">
+                    Polarization in x-y plane (2D)</a></p>
+                <h4 class="margin-h4items">Reflection/Refraction</h4>
+                <p><a href="#!">
+                </a>Coming soon...</p>
+                <h4 class="margin-h4items">Antennas</h4>
+                <p><a href="#!">
+                </a>Coming later...</p>
+            </div>
+
+            <div class="col-lg-6">
+                <h4>Transmission Lines</h4>
+                <p><a href="https://cdn.rawgit.com/gregnordin/ECEn360_Winter2016/master/transmission_lines/Voltage_waves_on_tline.html">
+                    Time-harmonic voltages: forward, reverse, total, and standing wave</a></p>
+                <p><a href="http://cemulate.github.io/smith-chart/">
+                    Interactive Smith Chart</a></p>
+                <p><a href="https://cdn.rawgit.com/gregnordin/ECEn360_Winter2016/master/transmission_lines/Smith_Chart_Stub_Matching.html">
+                    Smith Chart stub matching example</a> - illustration of procedure discussed in class</p>
+                <p><a href="https://cdn.rawgit.com/gregnordin/ECEn360_Winter2016/master/transmission_lines/tline_transient_voltage.html">
+                    Transient voltage on a transmission line</a></p>
+                <p><a href="https://cdn.rawgit.com/gregnordin/ECEn360_Winter2016/master/transmission_lines/tline_pulse_voltage.html">
+                    Voltage pulse on a transmission line</a></p>
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+        <p></p>
+        </footer>
+
+    </div> <!-- /container -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
