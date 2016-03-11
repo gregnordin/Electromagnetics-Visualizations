@@ -45,7 +45,7 @@ __Different development branch__
                 static/
                 images/
         gh-pages branch  # same organization & same files as master
-    Independent project repository  # Use rawgit to link to
+    Independent project repository  # Use rawgit.com to link to
         master branch
             <filename.html>
             README.md
