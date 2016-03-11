@@ -13,6 +13,7 @@ __'master' as development branch__
     git checkout gh-pages
     git merge master
     git push
+    git checkout master
 
 __Different development branch__
 
@@ -24,6 +25,8 @@ __Different development branch__
     git checkout gh-pages
     git merge master
     git push
+    git checkout master
+    git branch -d <devbranch>
 
 ###File Organization
 
