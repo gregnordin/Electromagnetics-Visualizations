@@ -40,17 +40,75 @@
             </nav>
         </div>
 
-        <p>For Hertzian dipole antenna, set L/&lambda; = 0.1.</p> <br />
-        <p> For half-wave dipole antenna, set L/&lambda; = 0.5.</p> <br />
-        <script type="text/javascript" src="http://demonstrations.wolfram.com/javascript/embed.js" ></script>
-        <script type="text/javascript">var demoObj = new DEMOEMBED(); demoObj.run('DipoleAntennaRadiationPattern', '', '489', '531');</script>
-        <div id="DEMO_DipoleAntennaRadiationPattern">
-            <a class="demonstrationHyperlink" href="http://demonstrations.wolfram.com/DipoleAntennaRadiationPattern/" target="_blank">
-                Dipole Antenna Radiation Pattern</a>
-            from the <a class="demonstrationHyperlink" href="http://demonstrations.wolfram.com/" target="_blank">
-                Wolfram Demonstrations Project</a>
-             by Nikolitsa Yannopoulou
-        </div><br />
+<div id="glowscript" class="glowscript">
+<link type="text/css" href="http://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+<link type="text/css" href="http://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="http://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/package/glow.2.1.min.js"></script>
+<script type="text/javascript" src="http://www.glowscript.org/package/RSrun.2.1.min.js"></script>
+<script type="text/javascript">
+;(function() { var __rt=srequire('streamline/lib/callbacks/runtime').runtime(__filename, false),__func=__rt.__func; function _$rapyd$_print() {
+  var args, output;
+  args = [].slice.call(arguments, 0);
+  output = JSON.stringify(args);
+  if (("console" in window)) { console.log(output.substr(1, output.length["-"](2))); };};
+
+function enumerate(item) {
+  var arr = [];
+  for (var i = 0; (i < item.length); i++) {
+    arr[arr.length] = [i,item[i],]; };
+
+  return arr;};
+
+function range(start, stop, step) {
+  if ((arguments.length <= 1)) {
+    stop = (start || 0);
+    start = 0; } ;
+
+  step = (arguments[2] || 1);
+  var length = Math.max(Math.ceil(stop["-"](start)["/"](step)), 0);
+  var idx = 0;
+  var range = new Array(length);
+  while ((idx < length)) {
+    range[idx++] = start;
+    start += step; };
+
+  return range;};
+
+function main(wait) { var version, box, sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, graph, display, vector, _$GS_$END, scene, _$rapyd$_Temp, _$rapyd$_print, arange, scene2, axis_radius, xaxis, yaxis, zaxis, flag_draw_normals, length_normals, radius_normals, n_theta, thetas, n_phi, phis, vertices, cphi, sphi, ctheta, stheta, r, x, y, z, theta, i, phi, quads, j, _$rapyd$_Unpack, q, _$rapyd$_Iter0, _$rapyd$_Index0, _$rapyd$_Iter1, _$rapyd$_Index1, _$rapyd$_Iter2, _$rapyd$_Index2;  function calc_quad_vertex_normals(q) {
+    "66";
+    q.v0.normal = q.v1.pos["-"](q.v0.pos).cross(q.v2.pos["-"](q.v0.pos)).norm()["-u"]();
+    "67";
+    q.v1.normal = q.v2.pos["-"](q.v1.pos).cross(q.v3.pos["-"](q.v1.pos)).norm()["-u"]();
+    "68";
+    q.v2.normal = q.v3.pos["-"](q.v2.pos).cross(q.v0.pos["-"](q.v2.pos)).norm()["-u"]();
+    "69";
+    q.v3.normal = q.v0.pos["-"](q.v3.pos).cross(q.v1.pos["-"](q.v3.pos)).norm()["-u"]();
+    "70";
+    return [q.v0.normal,q.v1.normal,q.v2.normal,q.v3.normal,]; };
+
+
+  function draw_normal(a) {
+    "73";
+    cylinder({ pos: a.pos, axis: a.normal, color: vector(0, 1, 1), length: length_normals, radius: radius_normals }); };
+
+
+  function print_2D_array(a) {
+    var j, i;
+    "76";
+    for (i = 0; (i < a.length); i++) {
+      "77";
+      for (j = 0; (j < a[0].length); j++) {
+        "78";
+        _$rapyd$_print(i, j, a[i][j].pos); }; }; }; var __frame = { name: "main", line: 29 }; return __func(wait, this, arguments, main, 0, __frame, function __$main() { version = ["2.1","glowscript",]; Array.prototype["+"] = function(r) { return this.concat(r); }; window.__GSlang = "vpython"; box = vp_box; sphere = vp_sphere; cylinder = vp_cylinder; pyramid = vp_pyramid; cone = vp_cone; helix = vp_helix; ellipsoid = vp_ellipsoid; ring = vp_ring; arrow = vp_arrow; graph = vp_graph; display = canvas; vector = vec; _$GS_$END = 0; scene = canvas(); _$rapyd$_Temp = 0; _$rapyd$_print = GSprint; arange = range; "3"; scene2 = canvas({ title: "Hertzian Dipole Antenna Pattern", width: 600, height: 600 }); "6"; axis_radius = 0.02; "7"; xaxis = cylinder({ pos: vector(0, 0, 0), axis: vector(1, 0, 0), length: 1.1, color: vector(1, 0, 0), radius: axis_radius }); "8"; yaxis = cylinder({ pos: vector(0, 0, 0), axis: vector(0, 1, 0), length: 1.1, color: vector(0, 1, 0), radius: axis_radius }); "9"; zaxis = cylinder({ pos: vector(0, 0, 0), axis: vector(0, 0, 1), length: 1.1, color: vector(0, 0, 1), radius: axis_radius }); "10"; _$rapyd$_print("x, y, and z axes are red, green, and blue, respectively"); "12"; flag_draw_normals = false; "13"; length_normals = 0.1; "14"; radius_normals = 0.005; "16"; n_theta = 20; "17"; thetas = arange(0, pi, pi["/"](n_theta)); "18"; n_phi = 40; "19"; phis = arange(0, 2["*"](pi), 2["*"](pi)["/"](n_phi)); "24"; vertices = []; "26"; _$rapyd$_Iter0 = enumerate(phis); for (_$rapyd$_Index0 = 0; (_$rapyd$_Index0 < _$rapyd$_Iter0.length); _$rapyd$_Index0++) { _$rapyd$_Unpack = _$rapyd$_Iter0[_$rapyd$_Index0]; i = _$rapyd$_Unpack[0]; phi = _$rapyd$_Unpack[1]; "27"; cphi = cos(phi); "28"; sphi = sin(phi); "30"; r = 1; "31"; vertices.append([]); "32"; _$rapyd$_Iter1 = enumerate(thetas); for (_$rapyd$_Index1 = 0; (_$rapyd$_Index1 < _$rapyd$_Iter1.length); _$rapyd$_Index1++) { _$rapyd$_Unpack = _$rapyd$_Iter1[_$rapyd$_Index1]; j = _$rapyd$_Unpack[0]; theta = _$rapyd$_Unpack[1]; "33"; ctheta = cos(theta); "34"; stheta = sin(theta); "35"; r = stheta; "36"; x = r["*"](stheta)["*"](cphi); "37"; y = r["*"](stheta)["*"](sphi); "38"; z = r["*"](ctheta); "39"; vertices[i].append(vertex({ pos: vec(x, y, z) })); }; }; "46"; quads = []; "47"; for (i = 0; (i < phis.length); i++) { "48"; for (j = 0; (j < thetas.length["-"](1)); j++) { "49"; if ((i === phis.length["-"](1))) { "50"; quads.append(quad({ v0: vertices[i][j], v1: vertices[0][j], v2: vertices[0][j["+"](1)], v3: vertices[i][j["+"](1)] })); "51"; } else { "52"; quads.append(quad({ v0: vertices[i][j], v1: vertices[i["+"](1)][j], v2: vertices[i["+"](1)][j["+"](1)], v3: vertices[i][j["+"](1)] })); } ; }; }; "56"; _$rapyd$_Iter2 = enumerate(quads); for (_$rapyd$_Index2 = 0; (_$rapyd$_Index2 < _$rapyd$_Iter2.length); _$rapyd$_Index2++) { _$rapyd$_Unpack = _$rapyd$_Iter2[_$rapyd$_Index2]; i = _$rapyd$_Unpack[0]; q = _$rapyd$_Unpack[1]; "58"; _$rapyd$_Unpack = calc_quad_vertex_normals(q); q.v0.normal = _$rapyd$_Unpack[0]; q.v1.normal = _$rapyd$_Unpack[1]; q.v2.normal = _$rapyd$_Unpack[2]; q.v3.normal = _$rapyd$_Unpack[3]; "59"; if (flag_draw_normals) { "60"; draw_normal(q.v0); "61"; draw_normal(q.v1); "62"; draw_normal(q.v2); "63"; draw_normal(q.v3); } ; }; "65"; "72"; "75"; wait(); });};
+main;
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; main(__func) })})()
+</script>
+</div>
 
         <div class="push"></div>
 
