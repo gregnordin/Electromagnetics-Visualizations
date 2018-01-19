@@ -1,5 +1,5 @@
 
-#Visualize Electromagnetic Phenomena
+## Visualize Electromagnetic Phenomena
 
 Please go to [Website](http://gregnordin.github.io/Electromagnetics-Visualizations)
 
